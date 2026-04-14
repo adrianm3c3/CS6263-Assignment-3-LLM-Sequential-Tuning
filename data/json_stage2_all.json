@@ -1,0 +1,702 @@
+[
+  {
+    "id": "classification_007",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The package arrived two days early and everything worked perfectly.\nTopic context: product_quality\nPriority hint: high",
+    "output": "{\"label\": \"positive\", \"topic\": \"product_quality\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "schema_generation_003",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a planning session scheduled in Houston, IL on October 19, 2026 at 10:30 AM. Attendees: Amelia Miller, Emily Martin, Isabella Martin. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Planning Session\", \"date\": \"October 19, 2026\", \"time\": \"10:30 AM\", \"location\": {\"city\": \"Houston\", \"state\": \"IL\"}, \"attendees\": [\"Amelia Miller\", \"Emily Martin\", \"Isabella Martin\"], \"virtual\": true}"
+  },
+  {
+    "id": "schema_generation_002",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a retrospective scheduled in Chicago, AZ on October 19, 2026 at 4:00 PM. Attendees: Sophia Taylor, Ethan Davis, Michael Jackson. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Retrospective\", \"date\": \"October 19, 2026\", \"time\": \"4:00 PM\", \"location\": {\"city\": \"Chicago\", \"state\": \"AZ\"}, \"attendees\": [\"Sophia Taylor\", \"Ethan Davis\", \"Michael Jackson\"], \"virtual\": true}"
+  },
+  {
+    "id": "classification_005",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: Absolutely loved the new update, the interface is much cleaner.\nTopic context: shipping\nPriority hint: low",
+    "output": "{\"label\": \"positive\", \"topic\": \"shipping\", \"priority\": \"low\"}"
+  },
+  {
+    "id": "tool_call_014",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Create a calendar event called Client Sync on July 8, 2026 at 6:30 PM for one hour.",
+    "output": "{\"tool_name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Client Sync\", \"date\": \"July 8, 2026\", \"time\": \"6:30 PM\", \"duration_minutes\": 60}}"
+  },
+  {
+    "id": "classification_006",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The meeting is scheduled for next Tuesday at 10 AM.\nTopic context: shipping\nPriority hint: high",
+    "output": "{\"label\": \"neutral\", \"topic\": \"shipping\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "classification_011",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: I still have not received my refund and support stopped replying.\nTopic context: shipping\nPriority hint: high",
+    "output": "{\"label\": \"negative\", \"topic\": \"shipping\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "tool_call_011",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Send an email to isabella.thompson@tesla.com with the subject 'Invoice Request' asking them to review and respond.",
+    "output": "{\"tool_name\": \"send_email\", \"arguments\": {\"to\": \"isabella.thompson@tesla.com\", \"subject\": \"Invoice Request\", \"body\": \"Please review and respond when you can.\"}}"
+  },
+  {
+    "id": "schema_generation_005",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a client sync scheduled in Denver, GA on June 20, 2026 at 2:45 PM. Attendees: Sarah Wilson, Charlotte Miller, Liam Anderson. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Client Sync\", \"date\": \"June 20, 2026\", \"time\": \"2:45 PM\", \"location\": {\"city\": \"Denver\", \"state\": \"GA\"}, \"attendees\": [\"Sarah Wilson\", \"Charlotte Miller\", \"Liam Anderson\"], \"virtual\": true}"
+  },
+  {
+    "id": "json_repair_016",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{'airline':'Delta','flight':'DL204','status':'delayed'}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL204\", \"status\": \"delayed\"}"
+  },
+  {
+    "id": "classification_020",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: I still have not received my refund and support stopped replying.\nTopic context: customer_support\nPriority hint: low",
+    "output": "{\"label\": \"negative\", \"topic\": \"customer_support\", \"priority\": \"low\"}"
+  },
+  {
+    "id": "classification_002",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: I still have not received my refund and support stopped replying.\nTopic context: customer_support\nPriority hint: high",
+    "output": "{\"label\": \"negative\", \"topic\": \"customer_support\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "tool_call_013",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Book a flight from Atlanta to Dallas for June 20, 2026 for one traveler.",
+    "output": "{\"tool_name\": \"book_flight\", \"arguments\": {\"origin\": \"Atlanta\", \"destination\": \"Dallas\", \"date\": \"June 20, 2026\", \"passengers\": 1}}"
+  },
+  {
+    "id": "classification_010",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The food was decent and the service was okay.\nTopic context: software_bug\nPriority hint: high",
+    "output": "{\"label\": \"neutral\", \"topic\": \"software_bug\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "schema_generation_008",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a retrospective scheduled in Seattle, WA on October 19, 2026 at 4:00 PM. Attendees: Emily Miller, Emily Robinson, Amelia Thomas. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Retrospective\", \"date\": \"October 19, 2026\", \"time\": \"4:00 PM\", \"location\": {\"city\": \"Seattle\", \"state\": \"WA\"}, \"attendees\": [\"Emily Miller\", \"Emily Robinson\", \"Amelia Thomas\"], \"virtual\": true}"
+  },
+  {
+    "id": "classification_019",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: Absolutely loved the new update, the interface is much cleaner.\nTopic context: customer_support\nPriority hint: high",
+    "output": "{\"label\": \"positive\", \"topic\": \"customer_support\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "schema_generation_014",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a planning session scheduled in Phoenix, IL on September 3, 2026 at 4:00 PM. Attendees: Ethan Thompson, Olivia Brown, Ethan Moore. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Planning Session\", \"date\": \"September 3, 2026\", \"time\": \"4:00 PM\", \"location\": {\"city\": \"Phoenix\", \"state\": \"IL\"}, \"attendees\": [\"Ethan Thompson\", \"Olivia Brown\", \"Ethan Moore\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_repair_020",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"department\":\"sales\",\"headcount\":12,\"open_roles\":3,}",
+    "output": "{\"department\": \"sales\", \"headcount\": 12, \"open_roles\": 3}"
+  },
+  {
+    "id": "tool_call_018",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Open a low priority support ticket for the finance team about a login issue.",
+    "output": "{\"tool_name\": \"create_support_ticket\", \"arguments\": {\"department\": \"finance\", \"issue_type\": \"login\", \"priority\": \"low\"}}"
+  },
+  {
+    "id": "tool_call_005",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Create a calendar event called Client Sync on October 19, 2026 at 4:00 PM for one hour.",
+    "output": "{\"tool_name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Client Sync\", \"date\": \"October 19, 2026\", \"time\": \"4:00 PM\", \"duration_minutes\": 60}}"
+  },
+  {
+    "id": "classification_013",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The package arrived two days early and everything worked perfectly.\nTopic context: meeting_notice\nPriority hint: low",
+    "output": "{\"label\": \"positive\", \"topic\": \"meeting_notice\", \"priority\": \"low\"}"
+  },
+  {
+    "id": "tool_call_020",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Check the weather in San Antonio using fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"San Antonio\", \"units\": \"fahrenheit\"}}"
+  },
+  {
+    "id": "tool_call_006",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Create a calendar event called Client Sync on October 19, 2026 at 2:45 PM for one hour.",
+    "output": "{\"tool_name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Client Sync\", \"date\": \"October 19, 2026\", \"time\": \"2:45 PM\", \"duration_minutes\": 60}}"
+  },
+  {
+    "id": "schema_generation_006",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a status update scheduled in Phoenix, GA on May 1, 2026 at 9:00 AM. Attendees: Harper Johnson, Sophia Clark, Emily Clark. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Status Update\", \"date\": \"May 1, 2026\", \"time\": \"9:00 AM\", \"location\": {\"city\": \"Phoenix\", \"state\": \"GA\"}, \"attendees\": [\"Harper Johnson\", \"Sophia Clark\", \"Emily Clark\"], \"virtual\": false}"
+  },
+  {
+    "id": "tool_call_008",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Check the weather in Houston using fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Houston\", \"units\": \"fahrenheit\"}}"
+  },
+  {
+    "id": "schema_generation_015",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a status update scheduled in Houston, IL on June 20, 2026 at 10:30 AM. Attendees: David Smith, Charlotte Harris, Sophia Miller. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Status Update\", \"date\": \"June 20, 2026\", \"time\": \"10:30 AM\", \"location\": {\"city\": \"Houston\", \"state\": \"IL\"}, \"attendees\": [\"David Smith\", \"Charlotte Harris\", \"Sophia Miller\"], \"virtual\": false}"
+  },
+  {
+    "id": "schema_generation_001",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a status update scheduled in San Antonio, AZ on July 8, 2026 at 10:30 AM. Attendees: Olivia Anderson, Lucas Brown, David Miller. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Status Update\", \"date\": \"July 8, 2026\", \"time\": \"10:30 AM\", \"location\": {\"city\": \"San Antonio\", \"state\": \"AZ\"}, \"attendees\": [\"Olivia Anderson\", \"Lucas Brown\", \"David Miller\"], \"virtual\": true}"
+  },
+  {
+    "id": "json_repair_004",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"user\":\"bob\",\"active\":True,\"roles\":[\"admin\",\"editor\"]}",
+    "output": "{\"user\": \"bob\", \"active\": true, \"roles\": [\"admin\", \"editor\"]}"
+  },
+  {
+    "id": "json_extraction_018",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Noah Davis from Tesla will visit Chicago on May 1, 2026. You can reach them at noah.davis@tesla.com or (674) 103-5315.",
+    "output": "{\"name\": \"Noah Davis\", \"company\": \"Tesla\", \"city\": \"Chicago\", \"date\": \"May 1, 2026\", \"email\": \"noah.davis@tesla.com\", \"phone\": \"(674) 103-5315\"}"
+  },
+  {
+    "id": "json_extraction_004",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Mia Taylor from Meta will visit Phoenix on July 8, 2026. You can reach them at mia.taylor@meta.com or (216) 877-3615.",
+    "output": "{\"name\": \"Mia Taylor\", \"company\": \"Meta\", \"city\": \"Phoenix\", \"date\": \"July 8, 2026\", \"email\": \"mia.taylor@meta.com\", \"phone\": \"(216) 877-3615\"}"
+  },
+  {
+    "id": "classification_016",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The food was decent and the service was okay.\nTopic context: software_bug\nPriority hint: medium",
+    "output": "{\"label\": \"neutral\", \"topic\": \"software_bug\", \"priority\": \"medium\"}"
+  },
+  {
+    "id": "json_extraction_013",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Daniel Garcia from Apple will visit Denver on May 1, 2026. You can reach them at daniel.garcia@apple.com or (481) 242-5040.",
+    "output": "{\"name\": \"Daniel Garcia\", \"company\": \"Apple\", \"city\": \"Denver\", \"date\": \"May 1, 2026\", \"email\": \"daniel.garcia@apple.com\", \"phone\": \"(481) 242-5040\"}"
+  },
+  {
+    "id": "json_repair_006",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{'airline':'Delta','flight':'DL204','status':'delayed'}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL204\", \"status\": \"delayed\"}"
+  },
+  {
+    "id": "json_repair_019",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{'airline':'Delta','flight':'DL204','status':'delayed'}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL204\", \"status\": \"delayed\"}"
+  },
+  {
+    "id": "tool_call_017",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Create a calendar event called Retrospective on March 5, 2026 at 6:30 PM for one hour.",
+    "output": "{\"tool_name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Retrospective\", \"date\": \"March 5, 2026\", \"time\": \"6:30 PM\", \"duration_minutes\": 60}}"
+  },
+  {
+    "id": "schema_generation_010",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a planning session scheduled in Atlanta, WA on September 3, 2026 at 10:30 AM. Attendees: David Taylor, Sarah Thomas, Isabella Johnson. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Planning Session\", \"date\": \"September 3, 2026\", \"time\": \"10:30 AM\", \"location\": {\"city\": \"Atlanta\", \"state\": \"WA\"}, \"attendees\": [\"David Taylor\", \"Sarah Thomas\", \"Isabella Johnson\"], \"virtual\": false}"
+  },
+  {
+    "id": "schema_generation_018",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a retrospective scheduled in Atlanta, GA on September 3, 2026 at 9:00 AM. Attendees: Liam Garcia, Amelia Lewis, Liam Clark. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Retrospective\", \"date\": \"September 3, 2026\", \"time\": \"9:00 AM\", \"location\": {\"city\": \"Atlanta\", \"state\": \"GA\"}, \"attendees\": [\"Liam Garcia\", \"Amelia Lewis\", \"Liam Clark\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_repair_008",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"user\":\"bob\",\"active\":True,\"roles\":[\"admin\",\"editor\"]}",
+    "output": "{\"user\": \"bob\", \"active\": true, \"roles\": [\"admin\", \"editor\"]}"
+  },
+  {
+    "id": "tool_call_009",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Send an email to lucas.white@meta.com with the subject 'Invoice Request' asking them to review and respond.",
+    "output": "{\"tool_name\": \"send_email\", \"arguments\": {\"to\": \"lucas.white@meta.com\", \"subject\": \"Invoice Request\", \"body\": \"Please review and respond when you can.\"}}"
+  },
+  {
+    "id": "json_extraction_003",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Sophia Martinez from Salesforce will visit Austin on June 20, 2026. You can reach them at sophia.martinez@salesforce.com or (943) 765-9928.",
+    "output": "{\"name\": \"Sophia Martinez\", \"company\": \"Salesforce\", \"city\": \"Austin\", \"date\": \"June 20, 2026\", \"email\": \"sophia.martinez@salesforce.com\", \"phone\": \"(943) 765-9928\"}"
+  },
+  {
+    "id": "json_extraction_019",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Benjamin Wilson from Netflix will visit San Antonio on July 8, 2026. You can reach them at benjamin.wilson@netflix.com or (864) 619-4258.",
+    "output": "{\"name\": \"Benjamin Wilson\", \"company\": \"Netflix\", \"city\": \"San Antonio\", \"date\": \"July 8, 2026\", \"email\": \"benjamin.wilson@netflix.com\", \"phone\": \"(864) 619-4258\"}"
+  },
+  {
+    "id": "schema_generation_011",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a client sync scheduled in Houston, IL on May 1, 2026 at 6:30 PM. Attendees: Sarah Garcia, Daniel Harris, Sophia Moore. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Client Sync\", \"date\": \"May 1, 2026\", \"time\": \"6:30 PM\", \"location\": {\"city\": \"Houston\", \"state\": \"IL\"}, \"attendees\": [\"Sarah Garcia\", \"Daniel Harris\", \"Sophia Moore\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_repair_011",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"product\": \"laptop\", \"price\": \"899\", \"in_stock\": yes}",
+    "output": "{\"product\": \"laptop\", \"price\": \"899\", \"in_stock\": \"yes\"}"
+  },
+  {
+    "id": "tool_call_004",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Open a low priority support ticket for the sales team about a technical issue.",
+    "output": "{\"tool_name\": \"create_support_ticket\", \"arguments\": {\"department\": \"sales\", \"issue_type\": \"technical\", \"priority\": \"low\"}}"
+  },
+  {
+    "id": "schema_generation_007",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a retrospective scheduled in Houston, AZ on June 20, 2026 at 1:15 PM. Attendees: Noah Brown, Benjamin Anderson, Liam Miller. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Retrospective\", \"date\": \"June 20, 2026\", \"time\": \"1:15 PM\", \"location\": {\"city\": \"Houston\", \"state\": \"AZ\"}, \"attendees\": [\"Noah Brown\", \"Benjamin Anderson\", \"Liam Miller\"], \"virtual\": true}"
+  },
+  {
+    "id": "json_extraction_001",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Emily Smith from Tesla will visit Houston on June 20, 2026. You can reach them at emily.smith@tesla.com or (352) 854-2679.",
+    "output": "{\"name\": \"Emily Smith\", \"company\": \"Tesla\", \"city\": \"Houston\", \"date\": \"June 20, 2026\", \"email\": \"emily.smith@tesla.com\", \"phone\": \"(352) 854-2679\"}"
+  },
+  {
+    "id": "tool_call_007",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Book a flight from San Antonio to Seattle for June 20, 2026 for one traveler.",
+    "output": "{\"tool_name\": \"book_flight\", \"arguments\": {\"origin\": \"San Antonio\", \"destination\": \"Seattle\", \"date\": \"June 20, 2026\", \"passengers\": 1}}"
+  },
+  {
+    "id": "json_extraction_005",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Mia Jackson from Tesla will visit Dallas on June 20, 2026. You can reach them at mia.jackson@tesla.com or (554) 204-2519.",
+    "output": "{\"name\": \"Mia Jackson\", \"company\": \"Tesla\", \"city\": \"Dallas\", \"date\": \"June 20, 2026\", \"email\": \"mia.jackson@tesla.com\", \"phone\": \"(554) 204-2519\"}"
+  },
+  {
+    "id": "schema_generation_016",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a project kickoff scheduled in Dallas, NY on October 19, 2026 at 9:00 AM. Attendees: David Thompson, Ethan Lewis, Benjamin Robinson. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Project Kickoff\", \"date\": \"October 19, 2026\", \"time\": \"9:00 AM\", \"location\": {\"city\": \"Dallas\", \"state\": \"NY\"}, \"attendees\": [\"David Thompson\", \"Ethan Lewis\", \"Benjamin Robinson\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_extraction_012",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Sophia Johnson from NVIDIA will visit Chicago on July 8, 2026. You can reach them at sophia.johnson@nvidia.com or (277) 316-6155.",
+    "output": "{\"name\": \"Sophia Johnson\", \"company\": \"NVIDIA\", \"city\": \"Chicago\", \"date\": \"July 8, 2026\", \"email\": \"sophia.johnson@nvidia.com\", \"phone\": \"(277) 316-6155\"}"
+  },
+  {
+    "id": "json_repair_015",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"product\": \"laptop\", \"price\": \"899\", \"in_stock\": yes}",
+    "output": "{\"product\": \"laptop\", \"price\": \"899\", \"in_stock\": \"yes\"}"
+  },
+  {
+    "id": "json_repair_017",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"user\":\"bob\",\"active\":True,\"roles\":[\"admin\",\"editor\"]}",
+    "output": "{\"user\": \"bob\", \"active\": true, \"roles\": [\"admin\", \"editor\"]}"
+  },
+  {
+    "id": "json_extraction_006",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Liam Davis from NVIDIA will visit Boston on July 8, 2026. You can reach them at liam.davis@nvidia.com or (254) 847-8527.",
+    "output": "{\"name\": \"Liam Davis\", \"company\": \"NVIDIA\", \"city\": \"Boston\", \"date\": \"July 8, 2026\", \"email\": \"liam.davis@nvidia.com\", \"phone\": \"(254) 847-8527\"}"
+  },
+  {
+    "id": "classification_003",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The meeting is scheduled for next Tuesday at 10 AM.\nTopic context: product_quality\nPriority hint: low",
+    "output": "{\"label\": \"neutral\", \"topic\": \"product_quality\", \"priority\": \"low\"}"
+  },
+  {
+    "id": "json_extraction_017",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Benjamin Anderson from Netflix will visit Austin on April 12, 2026. You can reach them at benjamin.anderson@netflix.com or (908) 649-5371.",
+    "output": "{\"name\": \"Benjamin Anderson\", \"company\": \"Netflix\", \"city\": \"Austin\", \"date\": \"April 12, 2026\", \"email\": \"benjamin.anderson@netflix.com\", \"phone\": \"(908) 649-5371\"}"
+  },
+  {
+    "id": "json_repair_009",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"department\":\"sales\",\"headcount\":12,\"open_roles\":3,}",
+    "output": "{\"department\": \"sales\", \"headcount\": 12, \"open_roles\": 3}"
+  },
+  {
+    "id": "classification_001",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: Absolutely loved the new update, the interface is much cleaner.\nTopic context: shipping\nPriority hint: high",
+    "output": "{\"label\": \"positive\", \"topic\": \"shipping\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "json_extraction_014",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Amelia Robinson from Tesla will visit Phoenix on September 3, 2026. You can reach them at amelia.robinson@tesla.com or (807) 508-6930.",
+    "output": "{\"name\": \"Amelia Robinson\", \"company\": \"Tesla\", \"city\": \"Phoenix\", \"date\": \"September 3, 2026\", \"email\": \"amelia.robinson@tesla.com\", \"phone\": \"(807) 508-6930\"}"
+  },
+  {
+    "id": "json_repair_010",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"department\":\"sales\",\"headcount\":12,\"open_roles\":3,}",
+    "output": "{\"department\": \"sales\", \"headcount\": 12, \"open_roles\": 3}"
+  },
+  {
+    "id": "tool_call_002",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Check the weather in Houston using fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Houston\", \"units\": \"fahrenheit\"}}"
+  },
+  {
+    "id": "classification_008",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: Absolutely loved the new update, the interface is much cleaner.\nTopic context: customer_support\nPriority hint: medium",
+    "output": "{\"label\": \"positive\", \"topic\": \"customer_support\", \"priority\": \"medium\"}"
+  },
+  {
+    "id": "tool_call_010",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Check the weather in Atlanta using fahrenheit.",
+    "output": "{\"tool_name\": \"get_weather\", \"arguments\": {\"city\": \"Atlanta\", \"units\": \"fahrenheit\"}}"
+  },
+  {
+    "id": "json_repair_005",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{'airline':'Delta','flight':'DL204','status':'delayed'}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL204\", \"status\": \"delayed\"}"
+  },
+  {
+    "id": "json_extraction_008",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Lucas Moore from Microsoft will visit Austin on June 20, 2026. You can reach them at lucas.moore@microsoft.com or (506) 181-4814.",
+    "output": "{\"name\": \"Lucas Moore\", \"company\": \"Microsoft\", \"city\": \"Austin\", \"date\": \"June 20, 2026\", \"email\": \"lucas.moore@microsoft.com\", \"phone\": \"(506) 181-4814\"}"
+  },
+  {
+    "id": "schema_generation_020",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a project kickoff scheduled in Denver, AZ on August 14, 2026 at 2:45 PM. Attendees: Charlotte Smith, James Brown, John Taylor. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Project Kickoff\", \"date\": \"August 14, 2026\", \"time\": \"2:45 PM\", \"location\": {\"city\": \"Denver\", \"state\": \"AZ\"}, \"attendees\": [\"Charlotte Smith\", \"James Brown\", \"John Taylor\"], \"virtual\": false}"
+  },
+  {
+    "id": "classification_015",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: Absolutely loved the new update, the interface is much cleaner.\nTopic context: product_quality\nPriority hint: low",
+    "output": "{\"label\": \"positive\", \"topic\": \"product_quality\", \"priority\": \"low\"}"
+  },
+  {
+    "id": "json_repair_018",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"user\":\"bob\",\"active\":True,\"roles\":[\"admin\",\"editor\"]}",
+    "output": "{\"user\": \"bob\", \"active\": true, \"roles\": [\"admin\", \"editor\"]}"
+  },
+  {
+    "id": "tool_call_015",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Open a low priority support ticket for the hr team about a technical issue.",
+    "output": "{\"tool_name\": \"create_support_ticket\", \"arguments\": {\"department\": \"hr\", \"issue_type\": \"technical\", \"priority\": \"medium\"}}"
+  },
+  {
+    "id": "classification_018",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The package arrived two days early and everything worked perfectly.\nTopic context: customer_support\nPriority hint: medium",
+    "output": "{\"label\": \"positive\", \"topic\": \"customer_support\", \"priority\": \"medium\"}"
+  },
+  {
+    "id": "classification_009",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: Absolutely loved the new update, the interface is much cleaner.\nTopic context: refund\nPriority hint: low",
+    "output": "{\"label\": \"positive\", \"topic\": \"refund\", \"priority\": \"low\"}"
+  },
+  {
+    "id": "json_repair_007",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{'airline':'Delta','flight':'DL204','status':'delayed'}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL204\", \"status\": \"delayed\"}"
+  },
+  {
+    "id": "schema_generation_009",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a retrospective scheduled in Atlanta, GA on July 8, 2026 at 9:00 AM. Attendees: John Jackson, Olivia Thompson, Michael Martin. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Retrospective\", \"date\": \"July 8, 2026\", \"time\": \"9:00 AM\", \"location\": {\"city\": \"Atlanta\", \"state\": \"GA\"}, \"attendees\": [\"John Jackson\", \"Olivia Thompson\", \"Michael Martin\"], \"virtual\": false}"
+  },
+  {
+    "id": "classification_014",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The meeting is scheduled for next Tuesday at 10 AM.\nTopic context: meeting_notice\nPriority hint: medium",
+    "output": "{\"label\": \"neutral\", \"topic\": \"meeting_notice\", \"priority\": \"medium\"}"
+  },
+  {
+    "id": "json_repair_012",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{name: \"Alice\", age: 28, city: \"Austin\"}",
+    "output": "{\"name\": \"Alice\", \"age\": 28, \"city\": \"Austin\"}"
+  },
+  {
+    "id": "json_extraction_016",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "David Wilson from Apple will visit Phoenix on April 12, 2026. You can reach them at david.wilson@apple.com or (604) 490-8668.",
+    "output": "{\"name\": \"David Wilson\", \"company\": \"Apple\", \"city\": \"Phoenix\", \"date\": \"April 12, 2026\", \"email\": \"david.wilson@apple.com\", \"phone\": \"(604) 490-8668\"}"
+  },
+  {
+    "id": "schema_generation_012",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a planning session scheduled in Chicago, NY on August 14, 2026 at 9:00 AM. Attendees: Emily Lewis, James Johnson, Emily Anderson. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Planning Session\", \"date\": \"August 14, 2026\", \"time\": \"9:00 AM\", \"location\": {\"city\": \"Chicago\", \"state\": \"NY\"}, \"attendees\": [\"Emily Lewis\", \"James Johnson\", \"Emily Anderson\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_extraction_011",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Olivia Thompson from Apple will visit Seattle on June 20, 2026. You can reach them at olivia.thompson@apple.com or (911) 432-1916.",
+    "output": "{\"name\": \"Olivia Thompson\", \"company\": \"Apple\", \"city\": \"Seattle\", \"date\": \"June 20, 2026\", \"email\": \"olivia.thompson@apple.com\", \"phone\": \"(911) 432-1916\"}"
+  },
+  {
+    "id": "schema_generation_019",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a client sync scheduled in Denver, TX on September 3, 2026 at 1:15 PM. Attendees: Liam Wilson, Harper Robinson, John Harris. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Client Sync\", \"date\": \"September 3, 2026\", \"time\": \"1:15 PM\", \"location\": {\"city\": \"Denver\", \"state\": \"TX\"}, \"attendees\": [\"Liam Wilson\", \"Harper Robinson\", \"John Harris\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_repair_013",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"department\":\"sales\",\"headcount\":12,\"open_roles\":3,}",
+    "output": "{\"department\": \"sales\", \"headcount\": 12, \"open_roles\": 3}"
+  },
+  {
+    "id": "tool_call_003",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Send an email to james.jackson@tesla.com with the subject 'Invoice Request' asking them to review and respond.",
+    "output": "{\"tool_name\": \"send_email\", \"arguments\": {\"to\": \"james.jackson@tesla.com\", \"subject\": \"Invoice Request\", \"body\": \"Please review and respond when you can.\"}}"
+  },
+  {
+    "id": "json_extraction_020",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "David White from Amazon will visit Atlanta on March 5, 2026. You can reach them at david.white@amazon.com or (823) 431-9005.",
+    "output": "{\"name\": \"David White\", \"company\": \"Amazon\", \"city\": \"Atlanta\", \"date\": \"March 5, 2026\", \"email\": \"david.white@amazon.com\", \"phone\": \"(823) 431-9005\"}"
+  },
+  {
+    "id": "tool_call_012",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Send an email to sophia.davis@openai.com with the subject 'Invoice Request' asking them to review and respond.",
+    "output": "{\"tool_name\": \"send_email\", \"arguments\": {\"to\": \"sophia.davis@openai.com\", \"subject\": \"Invoice Request\", \"body\": \"Please review and respond when you can.\"}}"
+  },
+  {
+    "id": "tool_call_001",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Book a flight from Denver to Boston for May 1, 2026 for one traveler.",
+    "output": "{\"tool_name\": \"book_flight\", \"arguments\": {\"origin\": \"Denver\", \"destination\": \"Boston\", \"date\": \"May 1, 2026\", \"passengers\": 1}}"
+  },
+  {
+    "id": "tool_call_019",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Open a high priority support ticket for the engineering team about a account issue.",
+    "output": "{\"tool_name\": \"create_support_ticket\", \"arguments\": {\"department\": \"engineering\", \"issue_type\": \"account\", \"priority\": \"low\"}}"
+  },
+  {
+    "id": "json_extraction_010",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Daniel Anderson from Microsoft will visit Phoenix on May 1, 2026. You can reach them at daniel.anderson@microsoft.com or (756) 846-5010.",
+    "output": "{\"name\": \"Daniel Anderson\", \"company\": \"Microsoft\", \"city\": \"Phoenix\", \"date\": \"May 1, 2026\", \"email\": \"daniel.anderson@microsoft.com\", \"phone\": \"(756) 846-5010\"}"
+  },
+  {
+    "id": "json_repair_003",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"user\":\"bob\",\"active\":True,\"roles\":[\"admin\",\"editor\"]}",
+    "output": "{\"user\": \"bob\", \"active\": true, \"roles\": [\"admin\", \"editor\"]}"
+  },
+  {
+    "id": "classification_012",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The meeting is scheduled for next Tuesday at 10 AM.\nTopic context: software_bug\nPriority hint: high",
+    "output": "{\"label\": \"neutral\", \"topic\": \"software_bug\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "json_extraction_009",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Emily Harris from Tesla will visit Denver on August 14, 2026. You can reach them at emily.harris@tesla.com or (376) 479-6820.",
+    "output": "{\"name\": \"Emily Harris\", \"company\": \"Tesla\", \"city\": \"Denver\", \"date\": \"August 14, 2026\", \"email\": \"emily.harris@tesla.com\", \"phone\": \"(376) 479-6820\"}"
+  },
+  {
+    "id": "json_extraction_015",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Sophia Miller from Netflix will visit Denver on April 12, 2026. You can reach them at sophia.miller@netflix.com or (983) 148-2796.",
+    "output": "{\"name\": \"Sophia Miller\", \"company\": \"Netflix\", \"city\": \"Denver\", \"date\": \"April 12, 2026\", \"email\": \"sophia.miller@netflix.com\", \"phone\": \"(983) 148-2796\"}"
+  },
+  {
+    "id": "tool_call_016",
+    "task_type": "tool_call_argument_generation",
+    "instruction": "Return a valid JSON object representing the tool call. Use keys tool_name and arguments only.",
+    "input": "Create a calendar event called Retrospective on June 20, 2026 at 1:15 PM for one hour.",
+    "output": "{\"tool_name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Retrospective\", \"date\": \"June 20, 2026\", \"time\": \"1:15 PM\", \"duration_minutes\": 60}}"
+  },
+  {
+    "id": "schema_generation_013",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a status update scheduled in Atlanta, NY on June 20, 2026 at 1:15 PM. Attendees: Ava Robinson, Noah Harris, Ava Martinez. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Status Update\", \"date\": \"June 20, 2026\", \"time\": \"1:15 PM\", \"location\": {\"city\": \"Atlanta\", \"state\": \"NY\"}, \"attendees\": [\"Ava Robinson\", \"Noah Harris\", \"Ava Martinez\"], \"virtual\": true}"
+  },
+  {
+    "id": "json_extraction_007",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Amelia Davis from Apple will visit San Antonio on July 8, 2026. You can reach them at amelia.davis@apple.com or (853) 733-6925.",
+    "output": "{\"name\": \"Amelia Davis\", \"company\": \"Apple\", \"city\": \"San Antonio\", \"date\": \"July 8, 2026\", \"email\": \"amelia.davis@apple.com\", \"phone\": \"(853) 733-6925\"}"
+  },
+  {
+    "id": "schema_generation_004",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a status update scheduled in Chicago, AZ on April 12, 2026 at 10:30 AM. Attendees: Daniel Moore, Sarah Robinson, Amelia Thompson. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Status Update\", \"date\": \"April 12, 2026\", \"time\": \"10:30 AM\", \"location\": {\"city\": \"Chicago\", \"state\": \"AZ\"}, \"attendees\": [\"Daniel Moore\", \"Sarah Robinson\", \"Amelia Thompson\"], \"virtual\": true}"
+  },
+  {
+    "id": "classification_004",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The food was decent and the service was okay.\nTopic context: meeting_notice\nPriority hint: high",
+    "output": "{\"label\": \"neutral\", \"topic\": \"meeting_notice\", \"priority\": \"high\"}"
+  },
+  {
+    "id": "classification_017",
+    "task_type": "exact_label_classification",
+    "instruction": "Classify the text and return valid JSON with exactly these keys: label, topic, priority. Allowed labels for label are positive, negative, neutral.",
+    "input": "Text: The package arrived two days early and everything worked perfectly.\nTopic context: customer_support\nPriority hint: medium",
+    "output": "{\"label\": \"positive\", \"topic\": \"customer_support\", \"priority\": \"medium\"}"
+  },
+  {
+    "id": "json_repair_002",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"department\":\"sales\",\"headcount\":12,\"open_roles\":3,}",
+    "output": "{\"department\": \"sales\", \"headcount\": 12, \"open_roles\": 3}"
+  },
+  {
+    "id": "json_repair_001",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{\"user\":\"bob\",\"active\":True,\"roles\":[\"admin\",\"editor\"]}",
+    "output": "{\"user\": \"bob\", \"active\": true, \"roles\": [\"admin\", \"editor\"]}"
+  },
+  {
+    "id": "schema_generation_017",
+    "task_type": "schema_constrained_generation",
+    "instruction": "Generate a valid JSON object that matches the provided schema exactly. Do not add extra keys.",
+    "input": "Create a JSON object for a retrospective scheduled in Houston, IL on October 19, 2026 at 6:30 PM. Attendees: James Jackson, Sophia Anderson, Liam Miller. Use this schema exactly: {\"event_title\": \"string\", \"date\": \"string\", \"time\": \"string\", \"location\": {\"city\": \"string\", \"state\": \"string\"}, \"attendees\": [\"string\"], \"virtual\": \"boolean\"}",
+    "output": "{\"event_title\": \"Retrospective\", \"date\": \"October 19, 2026\", \"time\": \"6:30 PM\", \"location\": {\"city\": \"Houston\", \"state\": \"IL\"}, \"attendees\": [\"James Jackson\", \"Sophia Anderson\", \"Liam Miller\"], \"virtual\": false}"
+  },
+  {
+    "id": "json_repair_014",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON. Return only a valid JSON object with the intended content preserved.",
+    "input": "{'airline':'Delta','flight':'DL204','status':'delayed'}",
+    "output": "{\"airline\": \"Delta\", \"flight\": \"DL204\", \"status\": \"delayed\"}"
+  },
+  {
+    "id": "json_extraction_002",
+    "task_type": "json_extraction",
+    "instruction": "Extract the contact and event information from the text and return a valid JSON object with the keys: name, company, city, date, email, phone.",
+    "input": "Amelia Brown from Salesforce will visit Chicago on March 5, 2026. You can reach them at amelia.brown@salesforce.com or (240) 195-4582.",
+    "output": "{\"name\": \"Amelia Brown\", \"company\": \"Salesforce\", \"city\": \"Chicago\", \"date\": \"March 5, 2026\", \"email\": \"amelia.brown@salesforce.com\", \"phone\": \"(240) 195-4582\"}"
+  }
+]

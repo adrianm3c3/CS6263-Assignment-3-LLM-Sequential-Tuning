@@ -1,0 +1,32 @@
+[
+  {
+    "id": "extract_001",
+    "task_type": "json_extraction",
+    "instruction": "Extract the requested information from the text and return only valid JSON.",
+    "input": "Text: \"John Smith works at Microsoft in Seattle and started in 2021.\"\nSchema: {\"name\": \"\", \"company\": \"\", \"location\": \"\", \"start_year\": \"\"}"
+  },
+  {
+    "id": "schema_001",
+    "task_type": "schema_generation",
+    "instruction": "Create a valid JSON object that matches the schema exactly. Return only JSON.",
+    "input": "Schema: {\"product_name\": \"\", \"price_usd\": 0, \"category\": \"\"}\nCreate an example for a laptop."
+  },
+  {
+    "id": "classify_001",
+    "task_type": "json_classification",
+    "instruction": "Classify the text using one allowed label and return only valid JSON.",
+    "input": "Text: \"The service was terrible and I want a refund.\"\nAllowed labels: positive, neutral, negative\nSchema: {\"label\": \"\"}"
+  },
+  {
+    "id": "repair_001",
+    "task_type": "json_repair",
+    "instruction": "Repair the malformed JSON and return only valid JSON.",
+    "input": "{name: \"Alice\", age: 25, city: Houston}"
+  },
+  {
+    "id": "tool_001",
+    "task_type": "tool_call_arguments",
+    "instruction": "Generate tool-call arguments as valid JSON. Return only JSON.",
+    "input": "Tool: get_weather\nArguments: city, date\nUser request: \"What is the weather in San Antonio tomorrow?\""
+  }
+]

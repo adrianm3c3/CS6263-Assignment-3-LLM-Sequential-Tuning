@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+logs/
+*.log
+
+*.pt
+*.pth
+*.safetensors
+*.zip
+
+results/checkpoint1/
+results/checkpoint2/
+assignment3.zip

@@ -1,0 +1,23 @@
+{
+  "checkpoint0_base": {
+    "total": 20,
+    "valid_json": 3,
+    "valid_json_rate": 0.15,
+    "exact_match": 0,
+    "exact_match_rate": 0.0
+  },
+  "checkpoint1": {
+    "total": 20,
+    "valid_json": 4,
+    "valid_json_rate": 0.2,
+    "exact_match": 0,
+    "exact_match_rate": 0.0
+  },
+  "checkpoint2": {
+    "total": 20,
+    "valid_json": 7,
+    "valid_json_rate": 0.35,
+    "exact_match": 2,
+    "exact_match_rate": 0.1
+  }
+}
